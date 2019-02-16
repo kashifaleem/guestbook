@@ -37,7 +37,7 @@ app.post("/new-entry", (req,res)=> {
 app.use((req,res)=> {
     res.status(404).render("404");
 });
-var port = process.env.PORT || 3000;
+var port = 3000;
 app.listen( port , () => {
     console.log("Guestbook app started on port 3000");
 });
