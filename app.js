@@ -24,7 +24,7 @@ app.get("/new-entry", (req,res)=> {
 app.post("/new-entry", (req,res)=> {
     if(!req.body.title || !req.body.body){
         res.status(400).send("Entries must have a title and a body");
-        return;
+        return;9
     }
     entries.push({
         title: req.body.title,
@@ -37,7 +37,7 @@ app.post("/new-entry", (req,res)=> {
 app.use((req,res)=> {
     res.status(404).render("404");
 });
-
-app.listen(3000, () => {
+var port = process.env.PORT || 3000;
+app.listen( port , () => {
     console.log("Guestbook app started on port 3000");
 });
