@@ -24,7 +24,7 @@ app.get("/new-entry", (req,res)=> {
 app.post("/new-entry", (req,res)=> {
     if(!req.body.title || !req.body.body){
         res.status(400).send("Entries must have a title and a body");
-        return;9
+        return;
     }
     entries.push({
         title: req.body.title,
